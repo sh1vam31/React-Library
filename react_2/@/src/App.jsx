@@ -35,6 +35,7 @@ const App = () => {
         <input
          checked={completed}
         //  checked= ""
+        // Two way binding for checkbox
          onChange={(e) => setcompleted(e.target.checked)}
          // onChange={(e) => console.log(e.target.checked)}
          type="checkbox" /> Completed
