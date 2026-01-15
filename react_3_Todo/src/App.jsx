@@ -6,29 +6,18 @@ import Read from './Components/Read.jsx'
 
 const App = () => {
 
-  const[todo , settodo] = useState(
+  const [todo, settodo] = useState(
     [
-      {id:1 , title:'Kaam karle bhani' , completed:false},
+      { id: 1, title: 'Kaam karle bhai', completed: false },
     ]
   )
 
- 
-
-  
-
   console.log("todo:", todo);
-
-
-
-
-
 
   return (
     <>
-    
-    <Create todo={todo} settodo={settodo} />
-    <Read todo={todo} settodo={settodo} />
-     
+      <Create todo={todo} settodo={settodo} />
+      <Read todo={todo} settodo={settodo} />
     </>
   )
 }

@@ -9,7 +9,7 @@ const Create = (props) => {
 
     const [title , setTitle] = useState('')
 
-    const submitHandler= (e) => {
+    const submitHandler  = (e) => {
         e.preventDefault();
         const newtodo = {
           // nanoid ia a package to generate unique id
