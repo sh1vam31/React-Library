@@ -18,6 +18,7 @@ const Read = (props) => {
         </li>
     })
 
+    // to delete an item in a list , you filter it out of the array and use the setter function 
     const DeleteHandaler = (id) => {
         const filterTodo = todo.filter((todo) => {
             return todo.id != id
