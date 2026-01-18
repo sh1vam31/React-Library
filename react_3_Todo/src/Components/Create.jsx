@@ -1,11 +1,15 @@
-import React from 'react'
 import { useState } from 'react'
 import { nanoid } from 'nanoid'
+import { toast } from 'react-toastify'
+import React, { useContext } from 'react'
+import { todocontext } from '../Wrapper'
 
 const Create = (props) => {
 
-    const todo = props.todo
-    const settodo = props.settodo
+    // const todo = props.todo
+    // const settodo = props.settodo
+
+    const [todo, settodo] = useContext(todocontext)
 
     const [title , setTitle] = useState('')
 
@@ -25,6 +29,9 @@ const Create = (props) => {
         settodo(copytodo)
     
         setTitle('')
+
+        // Notification for successful addition of todo
+        toast.success("Todo added successfully")
       }
 
   return (

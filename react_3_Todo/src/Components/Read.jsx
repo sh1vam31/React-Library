@@ -1,10 +1,16 @@
 import { Delete } from 'lucide-react'
-import React from 'react'
+import React, { useContext } from 'react'
+import { toast } from 'react-toastify'
+import { todocontext } from '../Wrapper'
 
 const Read = (props) => {
 
-    const todo = props.todo
-    const settodo = props.settodo
+    // context create karne ke baad jo bhi data wrapper component mai pass kara hoga vo saare childs and grand childes mai aa gay hoga 
+    const [todo, settodo] = useContext(todocontext)  // call the useContext(pass the name of the context) save the value and then print it .
+   //  console.log(value);
+
+    // const todo = props.todo
+    // const settodo = props.settodo
 
     const x = {color: 'blue'}
 
@@ -24,6 +30,8 @@ const Read = (props) => {
             return todo.id != id
         })
         settodo(filterTodo)
+
+        toast.error("Todo deleted successfully")
     }
 
 
